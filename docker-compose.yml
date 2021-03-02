@@ -1,0 +1,25 @@
+version: '2.0'
+
+services:
+  backend:
+    container_name: SMG-API
+    build:
+      context: ./smg-api
+      dockerfile: dockerfile
+    ports:
+      - "5000:5000"
+  frontend:
+    container_name: SMG-Web
+    env_file:
+        "./smg-web/.env"
+    build:
+      context: ./smg-web
+      dockerfile: dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - 3001:3000
+    stdin_open: true  
+    environment:
+      - CHOKIDAR_USEPOLLING=true

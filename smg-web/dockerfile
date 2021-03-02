@@ -1,0 +1,25 @@
+# pull official base image
+FROM node:15.10.0-alpine
+
+LABEL version="2.0"
+LABEL description="Base docker image for react frontend"
+LABEL maintainer=["malokevi@gmail.com"]
+
+# set working directory
+WORKDIR /app
+
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+# Install yarn and other dependencies via apk
+RUN apk update && apk add yarn python g++ make && rm -rf /var/cache/apk/*
+
+# install app dependencies
+COPY ["./package.json", "./yarn.lock", "./"]
+RUN yarn install
+
+# add app
+COPY . ./
+
+# start app
+CMD ["yarn", "start"]

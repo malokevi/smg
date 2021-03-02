@@ -1,0 +1,48 @@
+//map
+export const ADD_MAP_TO_STATE = 'ADD_MAP_TO_STATE'
+
+//options
+export const TOGGLE_MOBILE_NAV = 'TOGGLE_MOBILE_NAV'
+export const TOGGLE_SHOP_NAV = 'TOGGLE_STORE_NAV'
+export const SET_ACTIVE_CARD = 'SET_ACTIVE_CARD'
+
+//store
+export const GET_PRODUCTS = 'GET_PRODUCTS'
+export const GOT_PRODUCTS = 'GOT_PRODUCTS'
+
+export const GET_PRODUCT = 'GET_PRODUCT'
+export const GOT_PRODUCT = 'GOT_PRODUCT'
+
+export const GET_COLLECTIONS = 'GET_COLLECTIONS'
+export const GOT_COLLECTIONS = 'GOT_COLLECTIONS'
+
+export const GET_COLLECTION = 'GET_COLLECTION'
+export const GOT_COLLECTION = 'GOT_COLLECTION'
+
+export const TOGGLE_CART_ITEM = 'TOGGLE_CART_ITEM'
+export const CART_ITEM_TOGGLED = 'CART_ITEM_TOGGLED'
+
+export const SET_CART = 'SET_CART'
+export const POPULATE_CART = 'POPULATE_CART'
+export const CART_POPULATED = 'CART_POPULATED'
+
+export const CHECKOUT_CREATE = 'CHECKOUT_CREATE'
+export const CHECKOUT_CREATED = 'CHECKOUT_CREATED'
+
+//auth
+export const POST_LOGIN = 'POST_LOGIN'
+export const LOGGED_IN = 'LOGGED_IN'
+
+export const POST_REGISTER = 'POST_REGISTER'
+export const REG_COMPLETE = 'REG_COMPLETE'
+
+export const USER_LOGOUT = 'USER_LOGOUT'
+export const USER_LOGGED_OUT = 'USER_LOGGED_OUT'
+
+export const GET_ERRORS = "GET_ERRORS"
+export const USER_LOADING = "USER_LOADING"
+export const SET_CURRENT_USER = "SET_CURRENT_USER"
+
+//Contentful
+export const GET_ENTRIES = 'GET_ENTRIES'
+export const GOT_ENTRIES = 'GOT_ENTRIES'

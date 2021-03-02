@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css");
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.MuiButton-containedPrimary {
+    background-color: #1970bb !important;
+
+    &:hover {
+        background-color: #1264aa !important;
+    }
+}
+
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 100;
+
+    @media(min-width: 500px) {
+        font-size: 40px;
+    }
+
+    @media(min-width: 767px) {
+        font-size: 44px;
+    }
+
+    @media(min-width: 992px) {
+        font-size: 50px;
+    }
+
+    @media(min-width: 1440px) {
+        font-size: 54px;
+    }
+
+    @media(min-width: 1680px) {
+        font-size: 58px;
+    }
+}
+
+h2 {
+    font-size: 28px;
+
+    @media(min-width: 767px) {
+        font-size: 32px;
+    }
+
+    @media(min-width: 992px) {
+        font-size: 38px;
+    }
+
+    @media(min-width: 1440px) {
+        font-size: 44px;
+    }
+
+    @media(min-width: 1680px) {
+        font-size: 48px;
+    }
+}
+
+html {
+    background-color: #1b56aefc;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media(min-width: 767px) {
+        font-size: 20px;
+    }
+
+    @media(min-width: 1440px) {
+        font-size: 22px;
+    }
+}
+
+section {
+    padding: 3rem 0;
+    
+    @media(min-width: 980px) {
+        padding: 5rem 0;
+    }
+}
+
+.testimonial-swiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev, .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+        color: white;
+    }
+
+    .swiper-slide {
+        font-size: 18px;
+        color:#183545;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: flex;
+
+        svg {
+            color: #004da2;
+        }
+      }
+}
+
+//animations
+.fade-enter {
+    opacity: 0;
+    z-index: 3;
+}
+  
+.fade-enter.fade-enter-active {
+opacity: 1;
+transition: opacity 900ms ease-in;
+}
+
+.swiper-button-prev {
+    background-image: url("../images/icons/arrow-left-blue.png") !important;
+    background-size: contain;
+    background-position: center;
+    width: 24px;
+    background-repeat: no-repeat;
+    z-index: 1 !important;
+}
+
+.swiper-button-next {
+    background-image: url("../images/icons/arrow-right-blue.png") !important;
+    background-size: contain;
+    background-position: center;
+    width: 24px;
+    background-repeat: no-repeat;
+    z-index: 1 !important;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    display: none;
+}
+
+
+// Down Arrow Animation
+.arrow__wrapper {
+	width: 100%;
+    height: 100%;   
+    display: none;
+    
+    @media(min-width: 767px) {
+        display: block;
+    }
+
+    &:hover {
+        .arrow {
+            opacity: 1;
+        }
+    }
+
+    .arrow {
+        width: 64px;
+        height: 36px;
+        margin: auto;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+        opacity: 0.4;
+        transition: all 1s ease;
+        animation: bouncey 1.6s linear infinite;
+        
+        ul {
+            list-style: none;
+            li {
+                width: 40px;
+                height: 6px;
+                background: white;
+                &:nth-child(1) {
+                    left: 0;
+                    top: 15px;
+                    position: absolute;
+                    transform: (rotate(45deg));
+                    border-radius: (5px 0 0 5px);
+                }
+                &:nth-child(2) {
+                    left: 25px;
+                    position: absolute;
+                    border-radius: (0 5px 5px 0);
+                    top: 15px;
+                    transform: (rotate(-45deg));
+                }
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }    
+}
+
+@keyframes bouncey {
+	0% {
+		transform: translateY(0);
+    }
+	50% {
+        transform: translateY(8px);
+    }
+	100% {
+		transform: translateY(0);
+    }
+}
