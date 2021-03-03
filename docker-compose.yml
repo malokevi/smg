@@ -15,9 +15,6 @@ services:
     build:
       context: ./smg-web
       dockerfile: dockerfile
-    volumes:
-      - '.:/app'
-      - '/app/node_modules'
     ports:
       - 3001:3000
     stdin_open: true  

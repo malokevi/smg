@@ -15,11 +15,12 @@ ENV PATH /app/node_modules/.bin:$PATH
 RUN apk update && apk add yarn python g++ make && rm -rf /var/cache/apk/*
 
 # install app dependencies
-COPY ["./package.json", "./yarn.lock", "./"]
-RUN yarn install
+COPY ["package.json", "yarn.lock", "./"]
 
 # add app
-COPY . ./
+COPY . .
+
+RUN yarn install
 
 # start app
 CMD ["yarn", "start"]
